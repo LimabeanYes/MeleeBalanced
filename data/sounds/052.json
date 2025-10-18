@@ -1,0 +1,14 @@
+{
+  "name": "1pend",
+  "fileName": "1pend.ssm",
+  "groupFlags": 100729088,
+  "flags": 0,
+  "sounds": [
+    {
+      "name": "st_1pend_bgm"
+    },
+    {
+      "name": "st_1pend_figure"
+    }
+  ]
+}
