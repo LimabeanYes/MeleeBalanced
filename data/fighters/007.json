@@ -157,7 +157,7 @@
     "fighterDataPath": "PlSk.dat",
     "fighterDataSymbol": "ftDataSeak",
     "animFile": "PlSkAJ.dat",
-    "animCount": 317,
+    "animCount": 318,
     "demoFile": "PlSkDViWaitAJ.dat",
     "demoWait": "ftDemoViWaitMotionFileSeak",
     "demoResult": "ftDemoResultMotionFileSeak",
