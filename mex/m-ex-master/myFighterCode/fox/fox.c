@@ -29,7 +29,7 @@ void meterLogic(GOBJ* gobj)
 
 	MeterVars* meterData = gobj->userdata;
 	RelaxOnfame(meterData->fighter, gobj);
-	h
+	
 	if (meterData->fighter != 0 && (Pause_CheckStatus(1) != 2) && (Fighter_GetStocks(meterData->ply) > 0))
 	{
 		FighterData* fighterData = meterData->fighter->userdata;
