@@ -1,6 +1,6 @@
 #include "mex.h"
 
-#define FRAMES_REQUIREMENT 320
+#define FRAMES_REQUIREMENT 240
 #define METER_FILENAME "Meters.dat"
 #define METER_SYMBOL "Relax_scene_models"
 #define FRAMES_UNTIL_METERFULL 6400
