@@ -5,7 +5,7 @@ static void* originaldair_phys;
 
 void giveDamage_dair(GOBJ* gobj) {
 	FighterData* fd = gobj->userdata;
-	if (fd->input.held & HSD_BUTTON_A) {
+	if (fd->input.held & HSD_BUTTON_A || fd->input.cstick.Y < -0.33 || fd->input.held & HSD_TRIGGER_Z) {
 		fd->phys.self_vel.Y = DAIR_JUMPVEL;
 		fd->jump.jumps_used = 0;
 		ActionStateChange(0, 1, 0, gobj, ASID_JUMPB, 0x0, 0);
