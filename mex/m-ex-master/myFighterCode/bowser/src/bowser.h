@@ -5,6 +5,18 @@
 
 #define ARMOUR_CONST 75
 
+#define ARMOUR_VALUES {75, 100, 75, 120}
+
+enum armourKind {
+    DEFAULT,
+    FSMASH_ARMOUR,
+    UPSMASH_ARMOUR,
+    UPAIR_ARMOUR,
+    NUMBER_OF_ARMOURS
+};
+
+int armour_values[NUMBER_OF_ARMOURS] = ARMOUR_VALUES;
+
 #define STATE_SPECIALN 347
 #define STATE_SPECIALNAIR 348
 #define STATE_SPECIALS 350

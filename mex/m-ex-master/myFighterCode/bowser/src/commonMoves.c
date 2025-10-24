@@ -22,7 +22,7 @@ void AttackLw3_IASAcallback(GOBJ* gobj) {
 
 void AttackS4_Animationcallback(GOBJ* gobj) {
 	FighterData* fd = gobj->userdata;
-	fd->dmg.armor = ARMOUR_CONST;
+	fd->dmg.armor = armour_values[FSMASH_ARMOUR];
 	if (FrameTimerCheck(gobj) == 0) {
 		fd->dmg.armor = 0;
 		Fighter_EnterWait(gobj);
@@ -31,7 +31,7 @@ void AttackS4_Animationcallback(GOBJ* gobj) {
 
 void AttackHi4_Animationcallback(GOBJ* gobj) {
 	FighterData* fd = gobj->userdata;
-	fd->dmg.armor = ARMOUR_CONST;
+	fd->dmg.armor = armour_values[UPSMASH_ARMOUR];
 	if (FrameTimerCheck(gobj) == 0) {
 		fd->dmg.armor = 0;
 		Fighter_EnterWait(gobj);
@@ -40,7 +40,7 @@ void AttackHi4_Animationcallback(GOBJ* gobj) {
 
 void AttackAirHi_Animationcallback(GOBJ* gobj) {
 	FighterData* fd = gobj->userdata;
-	fd->dmg.armor = ARMOUR_CONST;
+	fd->dmg.armor = armour_values[UPAIR_ARMOUR];
 	if (FrameTimerCheck(gobj) == 0) {
 		fd->dmg.armor = 0;
 		Fighter_EnterFall(gobj);
@@ -58,7 +58,7 @@ void SetCommonMoveLogic(FighterData* fp)
 		fp->ftstates_common = common_logic_copy;
 
 		// change common states
-		fp->ftstates_common[ASID_ATTACKLW3].iasa_callback = AttackLw3_IASAcallback;
+		//fp->ftstates_common[ASID_ATTACKLW3].iasa_callback = AttackLw3_IASAcallback;
 		fp->ftstates_common[ASID_ATTACKAIRHI].animation_callback = AttackAirHi_Animationcallback;
 		fp->ftstates_common[ASID_ATTACKS4S].animation_callback = AttackS4_Animationcallback;
 		fp->ftstates_common[ASID_ATTACKHI4].animation_callback = AttackHi4_Animationcallback;
@@ -78,6 +78,6 @@ void OnLoad(GOBJ* fighter_gobj)
 void OnDestroy(GOBJ* gobj) {
 	FighterData* fd = gobj->userdata;
 	if (fd->ftstates_common != 0x803c2800) {
-		HSD_Free(fd->ftstates_common);
+		HSD_Free(fd->ftstates_common); //This is just blatantly doing nothing
 	}
 }

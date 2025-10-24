@@ -1,7 +1,8 @@
 #include "bowser.h"
-#include "special_lw.c"
+//#include "special_lw.c"
 #include "commonMoves.c"
 
+/*
 __attribute__((used)) static struct FtState move_logic[] = {
 		// State: 341 - SpecialNStart
 		{
@@ -280,5 +281,5 @@ __attribute__((used)) static struct FtState move_logic[] = {
 			0x800761C8, // CameraCallback
 		},
 	};
-	
+*/
 	
